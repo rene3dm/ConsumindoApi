@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consumindo API - GitHub</title>
+  <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/styleBackground.css">
+</head>
+
+<body>
+  <div class="background">
+    <div class="background-container">
+      <main>
+
+        <div class="cabecalho">
+          <a href="https://github.com/rene3dm" class="github-icon"><img class="svg-github"
+              src="svgs/github-brands.svg"></a>
+          <div class="cabecalho-container">
+            <div class="titulo">
+              <label>Olá, esta pagina consume a API do github. Digite seu usuário do github.</label>
+            </div>
+            <div class="buscar-container">
+              <input type="text" class="input-usuario" autocomplete="off" autocorrect="off" autocapitalize="off"
+                spellcheck="false">
+              <button type="submit" class="buscar-button"><img src="svgs/search-solid.svg"></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="conteudo">
+          <section id="usuario"></section>
+          <section id="repositorios">
+            <div>
+              <div class="cabecalho-repositorios">
+                <button class="button-voltar"><img src="svgs/arrow-circle-left-solid.svg" class="voltar"></button>
+                <label class="titulo-repositorio">Repositórios</label>
+              </div>
+              <div class="conteudo-repositorios"></div>
+            </div>
+            <div class="paginacao">
+              <button class="primeiro" title="Primeira">
+                <img class="esquerda"src="svgs/angle-double-left-solid.svg">
+              </button>
+              <button class="anterior" title="Anterior">
+                <img class="esquerda"src="svgs/angle-left-solid.svg">
+              </button>
+              <div class="numeros"></div>
+              <button class="proximo" title="Proximo">
+                <img class="direita"src="svgs/angle-left-solid.svg">
+              </button>
+              <button class="ultimo" title="Ultimo">
+                <img class="direita"src="svgs/angle-double-left-solid.svg">
+              </button>
+            </div>
+          </section>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="./scripts/script.js"></script>
+
+</body>
+
+</html>
