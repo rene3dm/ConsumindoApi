@@ -371,6 +371,10 @@ main::-webkit-scrollbar-track {
   height: fit-content;
 }
 
+.conteudo-repositorios a *{
+  cursor: pointer;
+}
+
 .card {
   margin-bottom: 20px;
   display: flex;
