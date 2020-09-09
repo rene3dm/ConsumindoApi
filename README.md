@@ -11,7 +11,8 @@
 * Layout responsivo
 * Pequenos efeitos de animações
 <br>
-<p style="color:#1b1c21;font-size:20px;font-weight:bold"> 🛠 Tecnologias </p>
+
+#### 🛠 Tecnologias
 
 * JavaScript
 
@@ -21,6 +22,7 @@
 
 <br>
 <br>
+
 #### [🔗 Site do projeto](https://rene3dm.github.io/ConsumindoApi/)
 
 <br>
