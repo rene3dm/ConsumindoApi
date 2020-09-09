@@ -10,7 +10,7 @@
 * Fazer uma paginação
 * Layout responsivo
 * Pequenos efeitos de animações
-<br>
+
 
 #### 🛠 Tecnologias
 
@@ -20,8 +20,6 @@
 
 * HTML
 
-<br>
-<br>
 
 #### [🔗 Site do projeto](https://rene3dm.github.io/ConsumindoApi/)
 
