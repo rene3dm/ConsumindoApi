@@ -21,9 +21,8 @@
 * HTML
 
 
-#### [🔗 Site do projeto](https://rene3dm.github.io/ConsumindoApi/)
+#### 🔗 [Site do projeto](https://rene3dm.github.io/ConsumindoApi/)
 
-<br>
 <br>
 <p><img src="./readme/img01.jpg" width=400></p>
 <p><img src="./readme/img02.jpg" width=400></p>
