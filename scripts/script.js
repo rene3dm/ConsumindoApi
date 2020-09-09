@@ -31,6 +31,12 @@ const start = () => {
         const data = await response.json()
         usuario.login = data.login,
           usuario.repositorios = data.public_repos
+
+        data.name = data.name ? data.name : 'Nome não informado.'
+        data.company = data.company ? data.company : 'Empresa não informada.'
+        data.location = data.location ? data.location : 'Localização não informada.'
+        data.bio = data.bio ? data.bio : '...'
+
         renderizaUsuario(data)
       }
       else {
@@ -49,10 +55,17 @@ const start = () => {
     }
 
     const atualizaEstado = () => {
+
+      if(document.body.offsetWidth < 667){
+        estado.maximoBotoesVisiveis = 3
+      }else{
+        estado.maximoBotoesVisiveis = 5
+      }
       estado.pagina = 1
       estado.totalPaginas = Math.ceil(usuario.repositorios / 10)
       atualiza()
     }
+
     const controles = {
       proximo() {
         estado.pagina++
@@ -174,7 +187,7 @@ const start = () => {
     return atualizaEstado
   }
 
-  const paginacaoTeste = paginacao()
+  const paginacaoAtualizaEstado = paginacao()
 
   const renderizaRepositorio = (data) => {
 
@@ -201,7 +214,7 @@ const start = () => {
       </a>
     `))
     conteudoRepositorios.innerHTML = cards.join("")
-    
+
   }
 
   const buscarRepositorios = async (page) => {
@@ -214,7 +227,7 @@ const start = () => {
           {
             nome: repositorio.name,
             descricao: repositorio.description ? repositorio.description : 'Sem descrição...',
-            linguagem: repositorio.language ? repositorio.language : 'Linguagem não informada',
+            linguagem: repositorio.language ? repositorio.language : 'Não informada',
             estrelas: repositorio.stargazers_count,
             forks: repositorio.forks,
             link: repositorio.html_url
@@ -236,7 +249,7 @@ const start = () => {
   const visualizarRepositorio = () => {
     sectionUsuario.style.display = "none"
     sectionRepositorios.style.display = "flex"
-    paginacaoTeste()
+    paginacaoAtualizaEstado()
     buscarRepositorios(1)
   }
 
@@ -313,6 +326,7 @@ const start = () => {
   inputUsuario.value = 'rene3dm'
 
   buttonBuscar.click()
+  
 }
 
 start()
